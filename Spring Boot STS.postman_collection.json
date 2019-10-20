@@ -1,0 +1,42 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Spring Boot STS",
+		"_postman_id": "701a6740-c24d-9b6c-7eb0-9ba8d124b407",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/country/all",
+			"request": {
+				"url": "http://localhost:8080/country/all",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/country/add",
+			"request": {
+				"url": "http://localhost:8080/country/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"countryName\": \"India\",\r\n   \"countryLang\": \"Hindi\",\r\n   \"countryPopulation\": 400000\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
