@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.interview.customdata.CountData;
+import com.example.interview.customdata.CountDataAll;
 import com.example.interview.entity.Country;
 import com.example.interview.repository.CountryRepository;
 
@@ -63,5 +65,19 @@ public class CountryController {
 
 		countryRepository.deleteById(countryId);
 	}
+	
+	// update existing country
+	@GetMapping("/count/all")
+	public CountData countryCount() {
+		return countryRepository.countCountry();		
+		
+	}
+	
+	@GetMapping("/count/all/country")
+	public CountDataAll countryCountAll() {
+		return countryRepository.coutCountry();		
+		
+	}
+	
 
 }

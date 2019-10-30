@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.data.annotation.Transient;
+
 /**
  * @author ikbal
  *
@@ -33,7 +35,7 @@ public class Country {
 
 	@Column(name = "country_population")
 	private int countryPopulation;
-
+	
 	public int getCountryId() {
 		return countryId;
 	}
